@@ -21,10 +21,10 @@ function Home() {
             console.log(data)
             if (!data.error) {
                 localStorage.setItem("userDetail", JSON.stringify(data.user));
-                // props.showAlert(`Welcome Again`, "success")
+                props.showAlert(`Welcome Again`, "success")
             }
             else {
-                // props.showAlert(data.error, "danger")
+                props.showAlert(data.error, "danger")
             }
         }
 
