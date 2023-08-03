@@ -6,6 +6,8 @@ export const userSlice = createSlice({
         user: null,
         login_signup_result: false,
         pageError: false,
+        bg_mode:null,
+        text_mode:null,
     },
     reducers: {
         setUser: (state, action) => {
@@ -18,9 +20,14 @@ export const userSlice = createSlice({
         },
         setPageError: (state, action) => {
             state.pageError = true;
-        }
+        },
+        setBgTxtColor: (state) => {
+            const modes = JSON.parse(localStorage.getItem("pageMode"))
+            state.bg_mode = modes?.bg || null;
+            state.text_mode = modes?.txt || null;
+          },
     }
 })
 
-export const { setUser, userLoginSignup, setPageError } = userSlice.actions;
+export const { setUser, userLoginSignup, setPageError, setBgTxtColor } = userSlice.actions;
 export default userSlice.reducer;
