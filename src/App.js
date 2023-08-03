@@ -17,7 +17,8 @@ function App() {
   const dispatch = useDispatch();
   dispatch(userLoginSignup())
   dispatch(setUser());
-  const auth_result = useSelector(state => state.user.login_signup_result)
+  const auth_result = useSelector(state => state.user.login_signup_result);
+  const pageError = useSelector(state => state.user.pageError);
   // const user = useSelector(state => state.user.user);
 
   const showAlert = (msg, mode) => {
@@ -31,15 +32,15 @@ function App() {
   return (
     <>
 
-      <div style={{ position: "fixed", width: "100%", zIndex:"3" }}>
+      <div style={{ position: "fixed", width: "100%", zIndex: "3" }}>
         <Alert alert={alert} />
       </div>
       <BrowserRouter>
         <Routes>
           <Route exact path="*" element={auth_result ? <Home /> : <Navigate to="/login" />} />
-          <Route exact path="/login" element={!auth_result ? <Login showAlert={showAlert}/> : <Navigate to="/" />} />
-          <Route exact path="/signup" element={!auth_result ? <Signup showAlert={showAlert}/> : <Navigate to="/" />} />
-          <Route exact path="/404-Error" element={!auth_result ? <PageNotFound /> : <Navigate to="/" />} />
+          <Route exact path="/login" element={!auth_result ? <Login showAlert={showAlert} /> : <Navigate to="/" />} />
+          <Route exact path="/signup" element={!auth_result ? <Signup showAlert={showAlert} /> : <Navigate to="/" />} />
+          <Route exact path="/404-Error" element={(!auth_result && pageError) || (auth_result && pageError) ? <PageNotFound /> : <Navigate to="/login" />} />
         </Routes>
       </BrowserRouter>
     </>
