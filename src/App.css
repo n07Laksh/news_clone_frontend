@@ -582,11 +582,26 @@ span.entity {
   margin: auto;
   padding: 20px;
 }
-.back {
+
+.back-button {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 10px;
+}
+.back-button:hover {
   cursor: pointer;
+  font-size: 25px;
+  /* color:green; */
+}
+.dark-light-switch {
+  position: absolute;
+  right: 9%;
 }
 
 @media screen and (max-width: 450px) {
+  .dark-light-switch {
+    position:relative;
+  }
   .login-signup-btn {
     width: 100%;
   }
