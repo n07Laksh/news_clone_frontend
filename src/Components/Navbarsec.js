@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Navbarsec() {
+function Navbarsec(props) {
     return (
         <>
-            <div className='container-fluid scroll-nav bg-light'>
+            <div id='navbar' className={`container-fluid scroll-nav bg-light ${props.isSticky?"sticky":""}`}>
 
                 <div className="navigation">
 
@@ -31,7 +31,7 @@ function Navbarsec() {
                     <div className="navigation-items2">
                         <div className="navigation_city">Choose State/City</div>
                         <div className="navigation_search"><i className='fa fa-search'></i></div>
-                        <div className="navigation_profile"><button className='btn btn-sm btn-dark '><i className='fa fa-user'></i> <Link to="profile" className='text-light' style={{textDecoration:"none"}} > Profile </Link></button> </div>
+                        <div className="navigation_profile"><button className={`btn btn-sm ${props.isSticky?"btn-light":"btn-dark"}`}><i className='fa fa-user'></i> <Link to="profile" className={`${props.isSticky?"text-dark":"text-light"}`} style={{textDecoration:"none"}} > Profile </Link></button> </div>
                     </div>
                 </div>
             </div>

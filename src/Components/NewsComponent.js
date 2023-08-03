@@ -198,7 +198,7 @@ function NewsComponent() {
                             </ul>
                             <h4 className="head mt-5">Air Quality Index</h4>
                             <div className='row row-cols-2'>
-                                <div className="col-6">
+                                <div className="col-6 air-index">
                                     <div className="card" style={{ width: "8rem" }}>
                                         <div className="card-body">
 
@@ -208,7 +208,7 @@ function NewsComponent() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-6 air-index">
                                     <div className="card" style={{ width: "8rem" }}>
                                         <div className="card-body">
 
@@ -218,7 +218,7 @@ function NewsComponent() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-6 air-index">
                                     <div className="card" style={{ width: "8rem" }}>
                                         <div className="card-body">
 
@@ -228,7 +228,7 @@ function NewsComponent() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-6 air-index">
                                     <div className="card" style={{ width: "8rem" }}>
                                         <div className="card-body">
 

@@ -56,13 +56,11 @@ function Footer() {
 
                         </div>
                     </div>
-                    <div className="col-3 border_left">
-                        <div>
-                            Live TV
+                    <div className="col-3 footer-liveTv">
+                        <div >
+                            <i className='fa fa-tv fa-television' title='Play Live TV'></i>
                         </div>
-                        <div>
-                            <i className='fa fa-television'></i>  Play Live Tv
-                        </div>
+                        <div className='play-live'>Play Live Tv</div>
                     </div>
                 </div>
             </div>
@@ -105,8 +103,15 @@ function Footer() {
                             <div className="col link">Topic 8</div>
                         </div>
                     </div>
-                    <div className="col">
-                        <i className="fa fa-twitter text-primary"></i> <i className="fa fa-instagram text-danger ms-3"></i> <i className="fa fa-facebook ms-3"></i> <i className="fa fa-youtube-play text-danger ms-3"></i> <i className="fa fa-telegram text-primary ms-3"></i>
+                    <div className="col footer-social-handle">
+                        <i className="fa social-footer footer-twitter fa-twitter"></i> 
+                        <i className="fa social-footer footer-instagram fa-instagram ms-3"></i> 
+                        <i className="fa social-footer footer-facebook fa-facebook ms-3"></i> 
+                        <i className="fa social-footer footer-youtube fa-youtube-play ms-3"></i> 
+                        <i className="fa social-footer footer-telegram fa-telegram ms-3"></i>
+                        <i className="fa social-footer footer-android fa-android ms-3"></i> 
+                        <i className="fa social-footer footer-apple fa-apple ms-3"></i> 
+
                     </div>
                 </div>
             </div>
