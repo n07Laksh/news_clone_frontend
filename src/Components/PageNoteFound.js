@@ -25,7 +25,7 @@ function PageNotFound() {
                                 <div className="content-box">
                                     <h3 className="h3">Look Like You're Lost</h3>
                                     <p>the page you are looking for not avaible!</p>
-                                    <a id="btn" className="btn homeBtn">Go Back</a>
+                                    <a href='void()' id="btn" className="btn homeBtn">Go Back</a>
                                 </div>
 
                             </div>
