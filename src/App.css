@@ -619,6 +619,13 @@ span.entity {
   cursor: pointer;
 }
 
+
+
+
+
+
+
+
 .effect {
   white-space: nowrap;
   display: inline-block;
@@ -644,4 +651,39 @@ span.entity {
   50% {
     border-color: black;
   }
+}
+
+
+
+
+
+/* 404_page style  */
+.page_404 {
+  padding:40px 0;
+  background: #fff;
+  font-family: "Arvo",serif;
+}
+.page_404 img {
+  width:100%;
+}
+.bg {
+  background-image: url(./image/404_page.gif);
+  height:400px;
+  background-position: center;
+}
+.bg h1 {
+  font-size: 80px;
+}
+.content-box h3 {
+  font-size: 50px;
+}
+.content-box{
+  margin-top: -60px;
+}
+.homeBtn {
+  padding:10px 40px;
+  background: green;
+  color:white !important;
+  margin:20px 0;
+  display: inline-block;
 }

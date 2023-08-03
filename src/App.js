@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser, userLoginSignup } from './preferences/slices/userSlice'
 import Alert from "./Components/Alert";
+import PageNotFound from './Components/PageNoteFound';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route exact path="*" element={auth_result ? <Home /> : <Navigate to="/login" />} />
           <Route exact path="/login" element={!auth_result ? <Login showAlert={showAlert}/> : <Navigate to="/" />} />
           <Route exact path="/signup" element={!auth_result ? <Signup showAlert={showAlert}/> : <Navigate to="/" />} />
+          <Route exact path="/404-Error" element={!auth_result ? <PageNotFound /> : <Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </>

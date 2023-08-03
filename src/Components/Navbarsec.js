@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbarsec(props) {
+    const [isSticky, setIsSticky] = useState(false);
+    // function for stick the navbar if page goes up
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            const navbar = document.getElementById("navbar");
+            const sticky = navbar.offsetTop;
+            setIsSticky(window.pageYOffset >= sticky);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [])
+
+    
     return (
         <>
-            <div id='navbar' className={`container-fluid scroll-nav bg-light ${props.isSticky?"sticky":""}`}>
+            <div id='navbar' className={`container-fluid scroll-nav bg-light ${isSticky ? "sticky" : ""}`}>
 
                 <div className="navigation">
 
@@ -31,7 +51,7 @@ function Navbarsec(props) {
                     <div className="navigation-items2">
                         <div className="navigation_city">Choose State/City</div>
                         <div className="navigation_search"><i className='fa fa-search'></i></div>
-                        <div className="navigation_profile"><button className={`btn btn-sm ${props.isSticky?"btn-light":"btn-dark"}`}><i className='fa fa-user'></i> <Link to="profile" className={`${props.isSticky?"text-dark":"text-light"}`} style={{textDecoration:"none"}} > Profile </Link></button> </div>
+                        <div className="navigation_profile"><button className={`btn btn-sm ${isSticky ? "btn-light" : "btn-dark"}`}><i className='fa fa-user'></i> <Link to="profile" className={`${isSticky ? "text-dark" : "text-light"}`} style={{ textDecoration: "none" }} > Profile </Link></button> </div>
                     </div>
                 </div>
             </div>
