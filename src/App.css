@@ -96,11 +96,6 @@
   margin-right: 5px;
 }
 
-
-
-
-
-
 /* Navbarsec style */
 .navigation {
   display: flex;
@@ -167,13 +162,11 @@
   position: sticky;
   top: 0;
   width: 100%;
-  z-index:2;
-  background:rgba(0, 0, 0, 0.9) !important;
-  color:white;
-  padding-bottom:6px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9) !important;
+  color: white;
+  padding-bottom: 6px;
 }
-
-
 
 .sub_navigation {
   position: relative;
@@ -220,18 +213,19 @@
   /* border-bottom: 0.2px solid #000; */
 }
 .fa-tv {
-  font-size:40px;
-  font-weight:700px;
-  padding:20px;
-  color:#e1261d;
+  font-size: 40px;
+  font-weight: 700px;
+  padding: 20px;
+  color: #e1261d;
 }
-.play-live{
+.play-live {
   font: size 17px;
-  padding:10px;
+  padding: 10px;
 }
-.fa-tv:hover, .play-live:hover {
+.fa-tv:hover,
+.play-live:hover {
   cursor: pointer;
-  color:#ccc;
+  color: #ccc;
 }
 
 .justify-content-between {
@@ -346,10 +340,6 @@
   color: rgb(66, 61, 61);
   cursor: pointer;
 }
-
-
-
-
 
 /* newsComponent style */
 .main-container {
@@ -524,7 +514,7 @@ span.entity {
 }
 
 .air-index {
-  margin-bottom:7px;
+  margin-bottom: 7px;
 }
 
 .cricket-row {
@@ -573,11 +563,6 @@ span.entity {
   margin-top: -12px;
 }
 
-
-
-
-
-
 /* login signup */
 .login-signup {
   width: 50%;
@@ -619,13 +604,6 @@ span.entity {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
 .effect {
   white-space: nowrap;
   display: inline-block;
@@ -653,22 +631,18 @@ span.entity {
   }
 }
 
-
-
-
-
 /* 404_page style  */
 .page_404 {
-  padding:40px 0;
+  padding: 40px 0;
   background: #fff;
-  font-family: "Arvo",serif;
+  font-family: "Arvo", serif;
 }
 .page_404 img {
-  width:100%;
+  width: 100%;
 }
 .bg {
   background-image: url(./image/404_page.gif);
-  height:400px;
+  height: 400px;
   background-position: center;
 }
 .bg h1 {
@@ -677,13 +651,13 @@ span.entity {
 .content-box h3 {
   font-size: 50px;
 }
-.content-box{
+.content-box {
   margin-top: -60px;
 }
 .homeBtn {
-  padding:10px 40px;
+  padding: 10px 40px;
   background: green;
-  color:white !important;
-  margin:20px 0;
+  color: white !important;
+  margin: 20px 0;
   display: inline-block;
 }
